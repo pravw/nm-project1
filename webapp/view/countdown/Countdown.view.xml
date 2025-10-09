@@ -26,26 +26,26 @@
             gridGap="1rem"
         >
            
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
-		<TileContent unit="Unit" footer="Footer Text">
-			<NumericContent value="1762" icon="sap-icon://line-charts" withMargin="false" />
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="DAYS"  press="press">
+		<TileContent >
+			<NumericContent value="{timer>/days}" valueColor="Critical"  withMargin="false" />
 		</TileContent>
 	</GenericTile>
 
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
-		<TileContent unit="Unit" footer="Footer Text">
-			<NumericContent value="12" withMargin="false" />
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="HOURS"  press="press">
+		<TileContent >
+			<NumericContent value="{timer>/hours}" valueColor="Critical"   withMargin="false" />
 		</TileContent>
 	</GenericTile>
-    	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
-		<TileContent unit="Unit" footer="Footer Text">
-			<NumericContent value="1762" icon="sap-icon://line-charts" withMargin="false" />
+    	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="MINUTES"  press="press">
+		<TileContent >
+			<NumericContent value="{timer>/minutes}" valueColor="Good"  withMargin="false" />
 		</TileContent>
 	</GenericTile>
 
-	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Cumulative Totals" subheader="Expenses" press="press">
-		<TileContent unit="Unit" footer="Footer Text">
-			<NumericContent value="12" withMargin="false" />
+	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="SECONDS"  press="press">
+		<TileContent >
+			<NumericContent value="{timer>/seconds}" withMargin="false" />
 		</TileContent>
 	</GenericTile>
         </grid:CSSGrid>
