@@ -1,0 +1,42 @@
+<mvc:View controllerName="project1.controller.Tiles"
+    xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+            xmlns:l="sap.ui.layout">
+            <Page
+                id="tiles1"
+                    showHeader="false"
+                    >
+    <l:VerticalLayout>
+      <l:HorizontalLayout content="{tiles>/}" allowWrapping="true">
+        <GenericTile class="sapUiTinyMarginBegin 
+        sapUiTinyMarginTop tileLayout" header="{tiles>title}" 
+        press="press(${tiles>route})">
+        </GenericTile>
+      </l:HorizontalLayout>
+    </l:VerticalLayout>
+      </Page>
+                                                                                                                        
+     </mvc:View>
+
+
+
+
+
+
+
+<!-- 
+
+     <mvc:View controllerName="com.te.teProjects.controller.Tiles" displayBlock="true"
+  xmlns="sap.m"
+  xmlns:l ="sap.ui.layout"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Page id ="tiles" showHeader="false">
+    <l:VerticalLayout>
+      <l:HorizontalLayout content="{tiles>/}" allowWrapping="true">
+        <GenericTile class="sapUiTinyMarginBegin 
+        sapUiTinyMarginTop tileLayout" header="{tiles>title}" 
+        press="press(${tiles>route})">
+        </GenericTile>
+      </l:HorizontalLayout>
+    </l:VerticalLayout>
+  </Page> -->
