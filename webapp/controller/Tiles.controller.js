@@ -11,11 +11,33 @@ sap.ui.define([
         },
 
 
-        press: function (oEvent) {
-             this.getOwnerComponent().getRouter().navTo("first")
+        // press: function (oEvent) {
+        //      this.getOwnerComponent().getRouter().navTo("first")
+        //      this.getOwnerComponent().getRouter().navTo("second")
             
 
 
-        }
+        // }
+
+
+
+        handleTilePress: function (oEvent) {
+    const oSource = oEvent.getSource();
+    const oBindingContext = oSource.getBindingContext("tiles");
+    const sRoute = oBindingContext.getProperty("route");
+    
+    this.getOwnerComponent().getRouter().navTo(sRoute);
+}
+
+
+
+    
+
+
+
+
+
+
+
     });
 });

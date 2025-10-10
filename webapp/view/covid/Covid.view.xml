@@ -1,0 +1,51 @@
+<mvc:View
+    controllerName="project1.controller.covid.Covid"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+>
+
+
+   <Panel  class="panelStyle" expandable="true" expanded="true" headerText="Settings" width="auto">
+                <content>
+
+                	<Button text="Latest count by list"
+						press="onPress"
+						ariaDescribedBy="defaultButtonDescription genericButtonDescription">
+				
+				</Button>
+				<Button type="Accept"
+						text="Latest count by graph"
+						press="onPress"
+						ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+					
+				</Button>
+
+                     </content>
+            </Panel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <Page
+        id="tiles1"
+        showHeader="false"
+    >
+
+    </Page> -->
+</mvc:View>

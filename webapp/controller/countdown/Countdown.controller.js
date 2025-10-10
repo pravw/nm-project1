@@ -30,10 +30,6 @@ sap.ui.define([
           this.getView().getModel("timer").setData(this.timer);
 
 
-
-
-
-
         }
 
     });

@@ -1,4 +1,4 @@
-<mvc:View controllerName="project1.controller.Tiles"
+<mvc:View controllerName="project1.controller.Tiles"  displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
         xmlns="sap.m"
             xmlns:l="sap.ui.layout">
@@ -10,7 +10,7 @@
       <l:HorizontalLayout content="{tiles>/}" allowWrapping="true">
         <GenericTile class="sapUiTinyMarginBegin 
         sapUiTinyMarginTop tileLayout" header="{tiles>title}" 
-        press="press(${tiles>route})">
+        press=".handleTilePress">
         </GenericTile>
       </l:HorizontalLayout>
     </l:VerticalLayout>
