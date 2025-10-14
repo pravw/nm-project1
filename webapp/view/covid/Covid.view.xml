@@ -1,24 +1,32 @@
 <mvc:View
     controllerName="project1.controller.covid.Covid"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:viz="sap.viz.ui5.controls"
     xmlns="sap.m"
     xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:l="sap.ui.layout"
     xmlns:core="sap.ui.core"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data" height="100%"
 >
 
+    <Page
+        id="Covid"
+        showHeader="false"
+    >
 
-   <Panel  class="panelStyle" expandable="true" expanded="true" headerText="Settings" width="auto">
+
+   <Panel  class="panelStyle" expandable="true" expanded="true" headerText="Data" width="auto">
                 <content>
 
                 	<Button text="Latest count by list"
-						press="onPress"
+						press="onPressList"
 						ariaDescribedBy="defaultButtonDescription genericButtonDescription">
 				
 				</Button>
 				<Button type="Accept"
 						text="Latest count by graph"
-						press="onPress"
+						press="onPressgraph"
 						ariaDescribedBy="acceptButtonDescription genericButtonDescription">
 					
 				</Button>
@@ -28,24 +36,32 @@
 
 
 
+              <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='line'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{/data}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="day"
+                                value="{day}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="total"
+                                value="{summary/total}" />
+                         
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                        values="total" />
+                    <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension"
+                        values="day" />
+                </viz:feeds>
+   
+            </viz:VizFrame>
+            <viz:Popover id="idPopOver" />
+            </Page>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <Page
-        id="tiles1"
-        showHeader="false"
-    >
-
-    </Page> -->
 </mvc:View>
