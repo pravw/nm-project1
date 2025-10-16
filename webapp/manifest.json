@@ -101,6 +101,20 @@
           "target": [
             "Covid"
           ]
+        },
+         {
+          "name": "second-list",
+          "pattern": "second-list",
+          "target": [
+            "Covid-list"
+          ]
+        },
+         {
+          "name": "second-pie",
+          "pattern": "second-pie",
+          "target": [
+            "Covid-Pie"
+          ]
         }
         
       ],
@@ -120,6 +134,14 @@
         "Covid": {
           "id": "covid",
           "name": "covid.Covid"
+        },
+        "Covid-list": {
+          "id": "covid.List",
+          "name": "covid.List"
+        },
+        "Covid-Pie": {
+          "id": "covid.Pie",
+          "name": "covid.Pie"
         }
       }
     },

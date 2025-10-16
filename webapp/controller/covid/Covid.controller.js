@@ -8,7 +8,7 @@ sap.ui.define([
 
     return Controller.extend("project1.controller.covid.Covid", {
        
-         dataPath : "../../model/data.json",
+         dataPath : "https://api.rootnet.in/covid19-in/stats/history",
          oVizFrame : null,
        
        
@@ -60,8 +60,13 @@ sap.ui.define([
         },
 
         onPressList: function(){
-            alert("list")
-
+            
+            // alert("list")
+    //          const oSource = oEvent.getSource();
+    // const oBindingContext = oSource.getBindingContext("tiles");
+    // const sRoute = oBindingContext.getProperty("route");
+    
+       this.getOwnerComponent().getRouter().navTo("second-list");
 
 
 
@@ -69,8 +74,7 @@ sap.ui.define([
 
           onPressgraph: function(){
 
-                 alert("graph")
-
+                 this.getOwnerComponent().getRouter().navTo("second-pie");
 
         },
 
