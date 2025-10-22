@@ -6,6 +6,10 @@
     {
         "title": "covid 19",
         "route": "second"
+    },
+     {
+        "title": "Vacination Tracker",
+        "route": "third"
     }
 ]
 

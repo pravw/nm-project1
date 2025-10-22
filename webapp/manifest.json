@@ -115,6 +115,13 @@
           "target": [
             "Covid-Pie"
           ]
+        },
+         {
+          "name": "third",
+          "pattern": "third",
+          "target": [
+            "Vacc"
+          ]
         }
         
       ],
@@ -142,6 +149,10 @@
         "Covid-Pie": {
           "id": "covid.Pie",
           "name": "covid.Pie"
+        }, 
+        "Vacc": {
+          "id": "vacc.Vacc",
+          "name": "vacc.Vacc"
         }
       }
     },
